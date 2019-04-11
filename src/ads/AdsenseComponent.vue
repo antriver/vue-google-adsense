@@ -15,10 +15,14 @@
     <script2
       v-if="isNonPersonalizedAds"
       type="text/javascript">
-      (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+      if (typeof window !== 'undefined') {
+        (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+      }
     </script2>
     <script2 type="text/javascript">
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      if (typeof window !== 'undefined') {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
     </script2>
   </div>
 </template>
